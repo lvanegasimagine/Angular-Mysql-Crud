@@ -21,7 +21,7 @@ export class GamesService {
     return this.http.get(`${this.URL}/games/${id}`)
   }
 
-  public deleteGame(id: string) {
+  public deleteGame(id: number) {
     return this.http.delete(`${this.URL}/games/${id}`)
   }
 
@@ -29,7 +29,7 @@ export class GamesService {
     return this.http.post(`${this.URL}/games`, game);
   }
 
-  updateGame(id: string, updateGame: Game): Observable<Game> {
+  updateGame(id: number, updateGame: Game): Observable<Game> {
     return this.http.put(`${this.URL}/games/${id}`, updateGame);
   }
 }

@@ -19,7 +19,7 @@ export class GameListComponent implements OnInit {
     this.getGames();
   }
 
-  deleteGame(id: any) {
+  deleteGame(id: number) {
     this.gameService.deleteGame(id).subscribe(
       resp => {
         this.getGames();
@@ -37,5 +37,9 @@ export class GameListComponent implements OnInit {
       },
       err => console.log(err)
     );
+  }
+
+  editGame(id: number) {
+    console.log(id);
   }
 }
